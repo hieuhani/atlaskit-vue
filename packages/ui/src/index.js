@@ -1,8 +1,9 @@
 import './index.styl'
 
 import AvContainer from './components/Container'
+import AvColumn from './components/Column'
 
-const components = [AvContainer]
+const components = [AvContainer, AvColumn]
 
 const AtlaskitVue = {
   install(Vue, options = {}) {
@@ -16,6 +17,6 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(AtlaskitVue)
 }
 
-export { AvContainer }
+export { AvContainer, AvColumn }
 
 export default AtlaskitVue

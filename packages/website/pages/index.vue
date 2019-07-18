@@ -1,7 +1,10 @@
 <template>
   <div>
     Index
-    <av-container>Test AvContainer</av-container>
+    <av-container>
+      <av-col xs="6" first>ahihi</av-col>
+      <av-col xs="3">ahihi</av-col>
+    </av-container>
   </div>
 </template>
 
