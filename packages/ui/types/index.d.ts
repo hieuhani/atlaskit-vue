@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
 export { AvContainer } from './Container'
+export { AvRow } from './Row'
+export { AvCol } from './Col'
 
 export class AtlaskitVue {
   static components: any[]
