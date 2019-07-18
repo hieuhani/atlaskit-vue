@@ -9,7 +9,10 @@ module.exports = {
       },
     ],
   },
-  plugins: ['~/plugins/atlaskit-vue'],
+  modules: ['@atlaskit-vue/ui/nuxt'],
+  atlaskit: {
+    treeShaking: true,
+  },
   build: {
     transpile: ['@atlaskit-vue/ui'],
   },
