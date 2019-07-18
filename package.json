@@ -1,0 +1,45 @@
+{
+  "name": "atlaskit-vue",
+  "version": "0.0.0",
+  "description": "Atlaskit Vue is a UI library, built according to the Atlassian Design Guidelines for Vue.js",
+  "main": "index.js",
+  "repository": "https://github.com/atlaskit-vue/atlaskit-vue",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Evan Nguyen",
+      "url": "https://github.com/dacsang97"
+    },
+    {
+      "name": "Hieu Hani",
+      "url": "https://github.com/hieuhani"
+    }
+  ],
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "scripts": {
+    "dev": "lerna run --parallel dev"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@vue/cli-service": "^3.9.2",
+    "husky": "^3.0.0",
+    "lerna": "^3.15.0",
+    "postcss-preset-env": "^6.7.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

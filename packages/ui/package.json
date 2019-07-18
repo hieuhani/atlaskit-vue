@@ -1,0 +1,32 @@
+{
+  "name": "@atlaskit-vue/ui",
+  "version": "0.0.0",
+  "description": "Atlaskit Vue is a UI library, built according to the Atlassian Design Guidelines for Vue.js",
+  "main": "dist/AtlaskitVue.umd.js",
+  "files": [
+    "dist",
+    "src",
+    "README.MD",
+    "types"
+  ],
+  "types": "types/index.d.ts",
+  "repository": "https://github.com/atlaskit-vue/atlaskit-vue",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Evan Nguyen",
+      "url": "https://github.com/dacsang97"
+    },
+    {
+      "name": "Hieu Hani",
+      "url": "https://github.com/hieuhani"
+    }
+  ],
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name AtlaskitVue src/index.js",
+    "dev": "yarn build --watch"
+  },
+  "peerDependencies": {
+    "vue": ">=2.0"
+  }
+}
