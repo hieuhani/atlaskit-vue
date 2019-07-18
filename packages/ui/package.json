@@ -5,9 +5,10 @@
   "main": "dist/AtlaskitVue.umd.js",
   "files": [
     "dist",
+    "nuxt",
     "src",
-    "README.MD",
-    "types"
+    "types",
+    "README.MD"
   ],
   "types": "types/index.d.ts",
   "repository": "https://github.com/atlaskit-vue/atlaskit-vue",
@@ -24,7 +25,7 @@
   ],
   "scripts": {
     "build": "vue-cli-service build --target lib --name AtlaskitVue src/index.js",
-    "dev": "yarn build --watch"
+    "dev": "yarn build --watch --mode production"
   },
   "peerDependencies": {
     "vue": ">=2.0"
