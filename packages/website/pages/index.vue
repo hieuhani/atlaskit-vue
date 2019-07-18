@@ -1,13 +1,14 @@
 <template>
-  <div>
-    Index
-    <av-container>
-      <av-row>
-        <av-col xs="6" first>ahihi</av-col>
-        <av-col xs="3">ahihi</av-col>
-      </av-row>
-    </av-container>
-  </div>
+  <av-container>
+    <av-row>
+      <av-col>
+        <h1>Icon</h1>
+        <av-icon name="user" />
+        <av-icon name="bell" />
+        <av-icon name="search" />
+      </av-col>
+    </av-row>
+  </av-container>
 </template>
 
 <script>

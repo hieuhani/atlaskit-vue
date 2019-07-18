@@ -3,8 +3,10 @@ import './index.styl'
 import AvContainer from './components/Container'
 import AvRow from './components/Row'
 import AvColumn from './components/Column'
+import AvButton from './components/Button'
+import AvIcon from './components/Icon'
 
-const components = [AvContainer, AvRow, AvColumn]
+const components = [AvContainer, AvRow, AvColumn, AvButton, AvIcon]
 
 const AtlaskitVue = {
   install(Vue, options = {}) {
