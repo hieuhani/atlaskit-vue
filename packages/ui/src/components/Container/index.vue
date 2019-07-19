@@ -5,4 +5,4 @@
 </template>
 
 <script src="./script.js" />
-<style src="./style/index.styl" lang="stylus" />
+<style src="./index.styl" lang="stylus">

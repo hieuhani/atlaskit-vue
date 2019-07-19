@@ -2,7 +2,9 @@
   "name": "@atlaskit-vue/ui",
   "version": "0.0.0",
   "description": "Atlaskit Vue is a UI library, built according to the Atlassian Design Guidelines for Vue.js",
-  "main": "dist/AtlaskitVue.umd.js",
+  "main": "dist/atlaskit-vue.common.js",
+  "web": "dist/atlaskit-vue.iife.js",
+  "module": "dist/atlaskit-vue.es.js",
   "files": [
     "dist",
     "nuxt",
@@ -23,9 +25,14 @@
       "url": "https://github.com/hieuhani"
     }
   ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "scripts": {
-    "build": "vue-cli-service build --target lib --name AtlaskitVue src/index.js",
-    "dev": "yarn build --watch --mode production"
+    "build": "bash scripts/build.sh",
+    "dev": "rollup -c scripts/rollup.config.js -w"
   },
   "peerDependencies": {
     "vue": ">=2.0"

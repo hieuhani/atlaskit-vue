@@ -4,7 +4,7 @@ import Vue from 'vue'
 import {
   AtlaskitVue,
   <%= options.atlaskit.components.join(',\n    ') %>
-} from <%= options.treeShaking ? `'@atlaskit-vue/ui/src/index.js'` : `'@atlaskit-vue/ui/dist/AtlaskitVue.common.js'` %>;
+} from '@atlaskit-vue/ui';
 
 Vue.use(AtlaskitVue, {
   components: [
@@ -12,6 +12,6 @@ Vue.use(AtlaskitVue, {
   ]
 });
 <% } else { %>
-import AtlaskitVue from <%= options.treeShaking ? `'@atlaskit-vue/ui/src/index.js'` : `'@atlaskit-vue/ui/dist/AtlaskitVue.umd.js'` %>;
-Vue.use(AtlaskitVue, <%= JSON.stringify(options.atlaskit ? options.atlaskit : {}, undefined, 4) %>);
+import Atlaskit from '@atlaskit-vue/ui';
+Vue.use(Atlaskit, <%= JSON.stringify(options.atlaskit ? options.atlaskit : {}, undefined, 4) %>);
 <% } %>

@@ -1,10 +1,10 @@
-import '@atlaskit-vue/ui/src/index.styl'
+import './index.styl'
 
-import AvContainer from '@atlaskit-vue/ui/src/components/Container'
-import AvRow from '@atlaskit-vue/ui/src/components/Row'
-import AvColumn from '@atlaskit-vue/ui/src/components/Column'
-import AvButton from '@atlaskit-vue/ui/src/components/Button'
-import AvIcon from '@atlaskit-vue/ui/src/components/Icon'
+import AvContainer from './components/Container'
+import AvRow from './components/Row'
+import AvColumn from './components/Column'
+import AvButton from './components/Button'
+import AvIcon from './components/Icon'
 
 const components = [AvContainer, AvRow, AvColumn, AvButton, AvIcon]
 
