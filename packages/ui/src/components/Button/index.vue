@@ -2,4 +2,4 @@
   <button>Ahihi</button>
 </template>
 
-<script src="./script" />
+<script src="./script.js" />

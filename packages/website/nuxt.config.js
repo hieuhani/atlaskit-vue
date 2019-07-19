@@ -11,7 +11,7 @@ module.exports = {
   },
   modules: ['@atlaskit-vue/ui/nuxt'],
   atlaskit: {
-    treeShaking: true,
+    stylus: true,
   },
   build: {
     transpile: ['@atlaskit-vue/ui'],

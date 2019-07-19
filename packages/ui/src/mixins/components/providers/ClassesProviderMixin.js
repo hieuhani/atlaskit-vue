@@ -1,4 +1,3 @@
-<script>
 export default {
   data() {
     const classesProvider = []
@@ -36,4 +35,3 @@ export default {
     },
   },
 }
-</script>
