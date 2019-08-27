@@ -1,0 +1,40 @@
+@import './style/variables';
+
+.av-button {
+  align-items: baseline;
+  border-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  max-width: 100%;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  .inner-wrapper {
+    align-self: center;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    position: relative;
+    &.fit {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+@mixin button-appearance($value) {
+  background: #000;
+}
+
+@each $appearance, $value in $button-appearances {
+  $default: map-get($value, 'default');
+  .av-button-#{$appearance}-dark {
+    background: map-get($default, 'dark');
+  }
+  .av-button-#{$appearance}-light {
+    background: map-get($default, 'light');
+  }
+}

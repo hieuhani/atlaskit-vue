@@ -7,6 +7,11 @@
         <av-icon name="bell" />
         <av-icon name="search" />
       </av-col>
+      <av-col>
+        <h1>Button</h1>
+        <av-button mode="light" />
+        <av-button mode="dark" />
+      </av-col>
     </av-row>
   </av-container>
 </template>

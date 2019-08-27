@@ -1,0 +1,188 @@
+$button-appearances: () !default;
+$button-appearances: map-merge(
+  (
+    "default": (
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+    "danger": (
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+    "link": (
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+    "primary":(
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+    "subtle":(
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+    "subtle-link":(
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+    "warning": (
+        "default": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "hover": (
+            "light": rgba(9, 30, 66, 0.08),
+            "dark": #313D52
+        ),
+        "active": (
+            "light": rgba(#B3D4FF, 0.6),
+            "dark": #B3D4FF
+        ),
+        "disabled": (
+            "light": rgba(9, 30, 66, 0.04),
+            "dark": #3B475C
+        ),
+        "selected": (
+            "light": #253858,
+            "dark": #253858
+        ),
+        "focus-selected": (
+            "light": #253858,
+            "dark": #0D1424
+        )
+    ),
+  ),
+  $button-appearances
+);
