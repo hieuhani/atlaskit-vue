@@ -1,8 +1,10 @@
 <template>
   <button class="av-button" :class="classes">
-    <inner-wrapper fit>
-      Ahihi@@@
-    </inner-wrapper>
+    <span :class="{ 'inner-wrapper': true, fit: true }">
+      <span class="content">
+        Button
+      </span>
+    </span>
   </button>
 </template>
 

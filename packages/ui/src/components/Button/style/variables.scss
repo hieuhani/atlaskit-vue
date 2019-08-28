@@ -1,188 +1,152 @@
+@import '../../../css/config/variables';
+
+$compact-button-height: (($grid-size * 3) / $font-size);
+$button-height: (($grid-size * 4) / $font-size);
+
 $button-appearances: () !default;
 $button-appearances: map-merge(
   (
     "default": (
-        "default": (
+        "background": (
+          "default": (
             "light": rgba(9, 30, 66, 0.04),
             "dark": #3B475C
+          ),
+          "hover": (
+              "light": rgba(9, 30, 66, 0.08),
+              "dark": #313D52
+          ),
+          "active": (
+              "light": rgba(#B3D4FF, 0.6),
+              "dark": #B3D4FF
+          ),
+          "disabled": (
+              "light": rgba(9, 30, 66, 0.04),
+              "dark": #3B475C
+          ),
+          "selected": (
+              "light": #253858,
+              "dark": #253858
+          ),
+          "focus-selected": (
+              "light": #253858,
+              "dark": #0D1424
+          ),
         ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
+        "color": (
+          "default": (
+            "light": #505F79,
+            "dark": #9FB0CC
+          ),
+          "active": (
+              "light": #0052CC,
+              "dark": #0052CC
+          ),
+          "disabled": (
+              "light": #A5ADBA,
+              "dark": #1B2638
+          ),
+          "selected": (
+              "light": #121A29,
+              "dark": #9FB0CC
+          ),
+          "focus-selected": (
+              "light": #121A29,
+              "dark": #9FB0CC
+          ),
         ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
+        "box-shadow-color": (
+          "focus": (
+            "light": rgba(#121A29, 0.6),
             "dark": #B3D4FF
+          ),
+          "focus-selected": (
+            "light": rgba(#2684FF, 0.6),
+            "dark": #B3D4FF
+          ),
         ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
     ),
-    "danger": (
-        "default": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
+    "primary": (
+        "background": (
+          "default": (
+            "light": #0052CC,
+            "dark": #4C9AFF
+          ),
+          "hover": (
+              "light": #0065FF,
+              "dark": #B3D4FF
+          ),
+          "active": (
+              "light": #0747A6,
+              "dark": #2684FF
+          ),
+          "disabled": (
+              "light": rgba(9, 30, 66, 0.04),
+              "dark": #3B475C
+          ),
+          "selected": (
+              "light": #253858,
+              "dark": #0D1424
+          ),
+          "focus-selected": (
+              "light": #253858,
+              "dark": #0D1424
+          ),
         ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
+        "color": (
+          "default": (
+            "light": #FFFFFF,
+            "dark": #1B2638
+          ),
+          "disabled": (
+            "light": #A5ADBA,
+            "dark": #1B2638
+          ),
+          "selected": (
+            "light": #121A29,
+            "dark": #9FB0CC
+          ),
+          "focus-selected": (
+            "light": #121A29,
+            "dark": #9FB0CC
+          ),
         ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
+        "box-shadow-color": (
+          "focus": (
+            "light": rgba(#2684FF, 0.6),
             "dark": #B3D4FF
-        ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
-    ),
-    "link": (
-        "default": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
-        ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
+          ),
+          "focus-selected": (
+            "light": rgba(#2684FF, 0.6),
             "dark": #B3D4FF
+          ),
         ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
-    ),
-    "primary":(
-        "default": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
-        ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
-            "dark": #B3D4FF
-        ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
-    ),
-    "subtle":(
-        "default": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
-        ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
-            "dark": #B3D4FF
-        ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
-    ),
-    "subtle-link":(
-        "default": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
-        ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
-            "dark": #B3D4FF
-        ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
-    ),
-    "warning": (
-        "default": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "hover": (
-            "light": rgba(9, 30, 66, 0.08),
-            "dark": #313D52
-        ),
-        "active": (
-            "light": rgba(#B3D4FF, 0.6),
-            "dark": #B3D4FF
-        ),
-        "disabled": (
-            "light": rgba(9, 30, 66, 0.04),
-            "dark": #3B475C
-        ),
-        "selected": (
-            "light": #253858,
-            "dark": #253858
-        ),
-        "focus-selected": (
-            "light": #253858,
-            "dark": #0D1424
-        )
     ),
   ),
   $button-appearances
+);
+
+$button-spacings: () !default;
+$button-spacings: map-merge(
+  (
+    "compact": (
+      "height": $compact-button-height + em,
+      "line-height": $compact-button-height + em,
+      "padding": 0 $grid-size + px,
+      "vertical-align": middle,
+    ),
+    "default": (
+      "height": $button-height + em,
+      "line-height": $button-height + em,
+      "padding": 0 $grid-size + px,
+      "vertical-align": middle,
+    ),
+    "none": (
+      "height": auto,
+      "line-height": inherit,
+      "padding": 0,
+      "vertical-align": baseline,
+    ),
+  ),
+  $button-spacings
 );

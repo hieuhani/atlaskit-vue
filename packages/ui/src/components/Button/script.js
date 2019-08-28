@@ -1,12 +1,8 @@
 import ClassesProviderMixin from '@atlaskit-vue/ui/src/mixins/components/providers/ClassesProviderMixin'
-import InnerWrapper from './InnerWrapper'
 
 export default {
   name: 'AvButton',
   mixins: [ClassesProviderMixin],
-  components: {
-    InnerWrapper,
-  },
   props: {
     appearance: {
       type: String,
@@ -16,10 +12,15 @@ export default {
       type: String,
       default: 'light',
     },
+    spacing: {
+      type: String,
+      default: 'default',
+    },
   },
   created() {
     this.classesProvider.add(() => ({
       [`av-button-${this.appearance}-${this.mode}`]: true,
+      [`av-button-spacing-${this.spacing}`]: true,
     }))
   },
 }
