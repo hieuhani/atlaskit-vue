@@ -2983,3 +2983,233 @@ template {
     right: 100%;
   }
 }
+.av-button {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  border-width: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  max-width: 100%;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-transition: background 0.1s ease-out, -webkit-box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0.1s ease-out, -webkit-box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38), -webkit-box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  margin: 4px;
+  cursor: default;
+}
+.av-button.av-button-spacing-none {
+  margin: 0;
+}
+.av-button:hover {
+  -webkit-transition: background 0s ease-out, -webkit-box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0s ease-out, -webkit-box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  transition: background 0s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38), -webkit-box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+}
+.av-button:hover, .av-button:active, .av-button:selected {
+  cursor: pointer;
+}
+.av-button:disabled {
+  cursor: not-allowed;
+}
+.av-button .inner-wrapper {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+}
+.av-button .inner-wrapper .content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.av-button .inner-wrapper.fit {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.av-button-spacing-compact {
+  height: 1.7142857143em;
+  line-height: 1.7142857143em;
+  padding: 0 8px;
+  vertical-align: middle;
+}
+
+.av-button-spacing-default {
+  height: 2.2857142857em;
+  line-height: 2.2857142857em;
+  padding: 0 8px;
+  vertical-align: middle;
+}
+
+.av-button-spacing-none {
+  height: auto;
+  line-height: inherit;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.av-button-default-light {
+  border-radius: 3px;
+  background: rgba(9, 30, 66, 0.04);
+  color: #42526E;
+}
+.av-button-default-light:focus, .av-button-default-light.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+          box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+}
+
+.av-button-default-dark {
+  border-radius: 3px;
+  background: #3B475C;
+  color: #9FB0CC;
+}
+.av-button-default-dark:focus, .av-button-default-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #B3D4FF;
+          box-shadow: 0 0 0 2px #B3D4FF;
+}
+
+.av-button-primary-light {
+  border-radius: 3px;
+  background: #0052CC;
+  color: #FFFFFF;
+}
+.av-button-primary-light:focus, .av-button-primary-light.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+          box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+}
+
+.av-button-primary-dark {
+  border-radius: 3px;
+  background: #4C9AFF;
+  color: #1B2638;
+}
+.av-button-primary-dark:focus, .av-button-primary-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #B3D4FF;
+          box-shadow: 0 0 0 2px #B3D4FF;
+}
+
+.av-button-warning-light {
+  border-radius: 3px;
+  background: #FFAB00;
+  color: #172B4D;
+}
+.av-button-warning-light:focus, .av-button-warning-light.focus {
+  -webkit-box-shadow: 0 0 0 2px #FF8B00;
+          box-shadow: 0 0 0 2px #FF8B00;
+}
+
+.av-button-warning-dark {
+  border-radius: 3px;
+  background: #FFAB00;
+  color: #172B4D;
+}
+.av-button-warning-dark:focus, .av-button-warning-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #FF8B00;
+          box-shadow: 0 0 0 2px #FF8B00;
+}
+
+.av-button-danger-light {
+  border-radius: 3px;
+  background: #DE350B;
+  color: #FFFFFF;
+}
+.av-button-danger-light:focus, .av-button-danger-light.focus {
+  -webkit-box-shadow: 0 0 0 2px #FF8F73;
+          box-shadow: 0 0 0 2px #FF8F73;
+}
+
+.av-button-danger-dark {
+  border-radius: 3px;
+  background: #DE350B;
+  color: #FFFFFF;
+}
+.av-button-danger-dark:focus, .av-button-danger-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #FF8F73;
+          box-shadow: 0 0 0 2px #FF8F73;
+}
+
+.av-button-link-light {
+  border-radius: 3px;
+  background: none;
+  color: #0052CC;
+}
+.av-button-link-light:focus, .av-button-link-light.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+          box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+}
+
+.av-button-link-dark {
+  border-radius: 3px;
+  background: none;
+  color: #4C9AFF;
+}
+.av-button-link-dark:focus, .av-button-link-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #B3D4FF;
+          box-shadow: 0 0 0 2px #B3D4FF;
+}
+
+.av-button-subtle-light {
+  border-radius: 3px;
+  background: none;
+  color: #42526E;
+}
+.av-button-subtle-light:focus, .av-button-subtle-light.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+          box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+}
+
+.av-button-subtle-dark {
+  border-radius: 3px;
+  background: none;
+  color: #9FB0CC;
+}
+.av-button-subtle-dark:focus, .av-button-subtle-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #B3D4FF;
+          box-shadow: 0 0 0 2px #B3D4FF;
+}
+
+.av-button-subtle-link-light {
+  border-radius: 3px;
+  background: none;
+  color: #6B778C;
+}
+.av-button-subtle-link-light:focus, .av-button-subtle-link-light.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+          box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.6);
+}
+
+.av-button-subtle-link-dark {
+  border-radius: 3px;
+  background: none;
+  color: #9FB0CC;
+}
+.av-button-subtle-link-dark:focus, .av-button-subtle-link-dark.focus {
+  -webkit-box-shadow: 0 0 0 2px #B3D4FF;
+          box-shadow: 0 0 0 2px #B3D4FF;
+}

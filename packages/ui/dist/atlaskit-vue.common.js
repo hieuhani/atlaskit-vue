@@ -396,17 +396,44 @@ __vue_render__$2._withStripped = true;
 
 var script$3 = {
   name: 'AvButton',
+  mixins: [ClassesProviderMixin],
+  props: {
+    appearance: {
+      type: String,
+      default: 'default',
+    },
+    mode: {
+      type: String,
+      default: 'light',
+    },
+    spacing: {
+      type: String,
+      default: 'default',
+    },
+  },
+  created: function created() {
+    var this$1 = this;
+
+    this.classesProvider.add(function () {
+      var obj;
+
+      return (( obj = {}, obj[("av-button-" + (this$1.appearance) + "-" + (this$1.mode))] = true, obj[("av-button-spacing-" + (this$1.spacing))] = true, obj ));
+    });
+  },
 };
 
 /* script */
 var __vue_script__$3 = script$3;
-
 /* template */
 var __vue_render__$3 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("button", [_vm._v("Ahihi")])
+  return _c("button", { staticClass: "av-button", class: _vm.classes }, [
+    _c("span", { class: { "inner-wrapper": true, fit: true } }, [
+      _c("span", { staticClass: "content" }, [_vm._v("\n      Button\n    ")])
+    ])
+  ])
 };
 var __vue_staticRenderFns__$3 = [];
 __vue_render__$3._withStripped = true;
