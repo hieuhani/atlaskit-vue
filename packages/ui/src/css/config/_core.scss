@@ -1,0 +1,6 @@
+//
+// Core
+//
+
+$body-background: map-get($background, 'light') !default;
+$body-color: map-get($text, 'light') !default;

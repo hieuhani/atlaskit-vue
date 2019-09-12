@@ -2,10 +2,12 @@ import path from 'path'
 import resolve from 'rollup-plugin-node-resolve'
 import vue from 'rollup-plugin-vue'
 import css from 'rollup-plugin-css-only'
+import buble from 'rollup-plugin-buble'
 import commonjs from 'rollup-plugin-commonjs'
-import stylus from 'rollup-plugin-stylus-compiler'
 import autoprefixer from 'autoprefixer'
 import postcssEnv from 'postcss-preset-env'
+import postcss from 'rollup-plugin-postcss'
+import { uglify } from 'rollup-plugin-uglify'
 
 const resolv = p => path.resolve(__dirname, '../', p)
 
@@ -17,15 +19,20 @@ const style = {
 }
 
 const plugins = [
+  // css({ output: resolv('dist/atlaskit-vue.css') }),
   resolve({
-    extensions: ['.js', '.json', '.vue'],
+    extensions: ['.js', '.json', '.vue', '.scss'],
+  }),
+  postcss({
+    extract: 'dist/atlaskit-vue.css',
+    plugins: postcssPlugins,
   }),
   commonjs(),
   vue({
     css: false,
     style,
   }),
-  stylus(),
+  buble({ objectAssign: 'Object.assign' }),
 ]
 
 export default [
@@ -42,7 +49,7 @@ export default [
         exports: 'named',
       },
     ],
-    plugins: [css({ output: resolv('dist/atlaskit-vue.css') }), ...plugins],
+    plugins,
   },
   {
     input: resolv('src/index.js'),
@@ -52,6 +59,11 @@ export default [
       name: 'atlaskitVue',
       exports: 'named',
     },
-    plugins: [css({ output: false }), ...plugins],
+    plugins: [
+      ...plugins,
+      uglify({
+        compress: { unused: true, dead_code: true },
+      }),
+    ],
   },
 ]

@@ -36,5 +36,6 @@
   },
   "peerDependencies": {
     "vue": ">=2.0"
-  }
+  },
+  "devDependencies": {}
 }
