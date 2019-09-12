@@ -1,7 +1,6 @@
 import path from 'path'
 import resolve from 'rollup-plugin-node-resolve'
 import vue from 'rollup-plugin-vue'
-import css from 'rollup-plugin-css-only'
 import buble from 'rollup-plugin-buble'
 import commonjs from 'rollup-plugin-commonjs'
 import autoprefixer from 'autoprefixer'

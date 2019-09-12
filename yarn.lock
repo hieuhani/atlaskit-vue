@@ -10528,14 +10528,6 @@ rollup-plugin-scss@^1.0.2:
     node-sass "4"
     rollup-pluginutils "2"
 
-rollup-plugin-stylus-compiler@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-stylus-compiler/-/rollup-plugin-stylus-compiler-1.0.1.tgz#9b5200451177c7aa24ed6b84bb57412b2731273d"
-  integrity sha512-ryl8J/Z1h/h17PfeLTdtftUM8hc3M+OEsPtiypuE+8AboXjiSnMba2BLk3w2fkETexjmhZokkAQ7znM3jY1CjQ==
-  dependencies:
-    rollup-pluginutils "^2.4.1"
-    stylus "^0.54.5"
-
 rollup-plugin-uglify@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-6.0.3.tgz#e3f776171344b580bec6c6ab8888622b67099457"
@@ -11376,15 +11368,6 @@ stylehacks@^4.0.0:
     browserslist "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
-
-stylus-loader@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/stylus-loader/-/stylus-loader-3.0.2.tgz#27a706420b05a38e038e7cacb153578d450513c6"
-  integrity sha512-+VomPdZ6a0razP+zinir61yZgpw2NfljeSsdUF5kJuEzlo3khXhY19Fn6l8QQz1GRJGtMCo8nG5C04ePyV7SUA==
-  dependencies:
-    loader-utils "^1.0.2"
-    lodash.clonedeep "^4.5.0"
-    when "~3.6.x"
 
 stylus@^0.54.5:
   version "0.54.5"
@@ -12395,11 +12378,6 @@ whatwg-url@^7.0.0:
     lodash.sortby "^4.7.0"
     tr46 "^1.0.1"
     webidl-conversions "^4.0.2"
-
-when@~3.6.x:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/when/-/when-3.6.4.tgz#473b517ec159e2b85005497a13983f095412e34e"
-  integrity sha1-RztRfsFZ4rhQBUl6E5g/CVQS404=
 
 which-module@^1.0.0:
   version "1.0.0"
