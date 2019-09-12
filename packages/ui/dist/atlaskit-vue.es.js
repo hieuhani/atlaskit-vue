@@ -1,8 +1,8 @@
 var ClassesProviderMixin = {
-  data() {
-    const classesProvider = [];
+  data: function data() {
+    var classesProvider = [];
 
-    classesProvider.add = (type, fn) => {
+    classesProvider.add = function (type, fn) {
       if (!fn) {
         fn = type;
         type = 'root';
@@ -14,18 +14,18 @@ var ClassesProviderMixin = {
     };
 
     return {
-      classesProvider,
+      classesProvider: classesProvider,
     }
   },
   computed: {
     /**
      * Compute dynamically provided classes from mixins
      */
-    classes() {
-      return this.classesProvider.reduce((acc, fn) => {
-        const rule = fn();
+    classes: function classes() {
+      return this.classesProvider.reduce(function (acc, fn) {
+        var rule = fn();
 
-        if (!acc[fn.type]) acc[fn.type] = [];
+        if (!acc[fn.type]) { acc[fn.type] = []; }
 
         acc[fn.type].push(rule);
         acc.push(rule);
@@ -45,10 +45,12 @@ var script = {
       default: false,
     },
   },
-  created() {
-    this.classesProvider.add(() => ({
-      '-fluid': this.fluid,
-    }));
+  created: function created() {
+    var this$1 = this;
+
+    this.classesProvider.add(function () { return ({
+      '-fluid': this$1.fluid,
+    }); });
   },
 };
 
@@ -138,7 +140,7 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
 var normalizeComponent_1 = normalizeComponent;
 
 /* script */
-const __vue_script__ = script;
+var __vue_script__ = script;
 /* template */
 var __vue_render__ = function() {
   var _vm = this;
@@ -155,13 +157,13 @@ var __vue_staticRenderFns__ = [];
 __vue_render__._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__ = undefined;
+  var __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = undefined;
+  var __vue_scope_id__ = undefined;
   /* module identifier */
-  const __vue_module_identifier__ = undefined;
+  var __vue_module_identifier__ = undefined;
   /* functional template */
-  const __vue_is_functional_template__ = false;
+  var __vue_is_functional_template__ = false;
   /* style inject */
   
   /* style inject SSR */
@@ -188,7 +190,7 @@ __vue_render__._withStripped = true;
  *
  * @type {string[]}
  */
-const breakpointKeys = ['', 'xs', 'sm', 'md', 'lg', 'xl'];
+var breakpointKeys = ['', 'xs', 'sm', 'md', 'lg', 'xl'];
 
 /**
  * Capitalize first letter of a string
@@ -196,11 +198,13 @@ const breakpointKeys = ['', 'xs', 'sm', 'md', 'lg', 'xl'];
  * @param string
  * @returns {string}
  */
-const capitalizeFirst = string => string.charAt(0).toUpperCase() + string.slice(1);
+var capitalizeFirst = function (string) { return string.charAt(0).toUpperCase() + string.slice(1); };
 
-const toKebabCase = (string, from = 'camel') => {
-  const regExp = from === 'camel' ? /([A-Z])/g : /_([a-zA-Z])/g;
-  return string.replace(regExp, (_, p) => '-' + p.toLowerCase())
+var toKebabCase = function (string, from) {
+  if ( from === void 0 ) from = 'camel';
+
+  var regExp = from === 'camel' ? /([A-Z])/g : /_([a-zA-Z])/g;
+  return string.replace(regExp, function (_, p) { return '-' + p.toLowerCase(); })
 };
 
 /**
@@ -211,20 +215,20 @@ const toKebabCase = (string, from = 'camel') => {
  * @param breakpoint
  * @returns {string}
  */
-const breakpointClass = (className, breakpoint) => {
+var breakpointClass = function (className, breakpoint) {
   if (['string', 'number'].indexOf(typeof breakpoint) > -1 && breakpoint !== '') {
-    return `${toKebabCase(className)}-${breakpoint}`
+    return ((toKebabCase(className)) + "-" + breakpoint)
   }
 
   return toKebabCase(className)
 };
 
-const modifierClass = className => '-' + className;
+var modifierClass = function (className) { return '-' + className; };
 
-const properties = {};
+var properties = {};
 
-breakpointKeys.forEach(breakpoint => {
-  const props = [
+breakpointKeys.forEach(function (breakpoint) {
+  var props = [
     'start',
     'center',
     'end',
@@ -233,9 +237,8 @@ breakpointKeys.forEach(breakpoint => {
     'bottom',
     'around',
     'between',
-    'reverse',
-  ];
-  props.forEach(property => {
+    'reverse' ];
+  props.forEach(function (property) {
     properties[property + capitalizeFirst(breakpoint)] = {
       type: Boolean,
       default: false,
@@ -245,32 +248,29 @@ breakpointKeys.forEach(breakpoint => {
 
 var script$1 = {
   name: 'AvRow',
-  props: {
-    noGutter: {
+  props: Object.assign({}, {noGutter: {
       type: Boolean,
       default: false,
     },
     noCollapse: {
       type: Boolean,
       default: false,
-    },
-    ...properties,
-  },
+    }},
+    properties),
   computed: {
-    classes() {
+    classes: function classes() {
+      var this$1 = this;
+
       return [
         this.noGutter ? '-no-gutter' : '',
-        this.noCollapse ? '-no-collapse' : '',
-        ...Object.keys(properties).map(p =>
-          this[p] ? breakpointClass(modifierClass(p), this[p]) : '',
-        ),
-      ].filter(p => p !== '')
+        this.noCollapse ? '-no-collapse' : '' ].concat( Object.keys(properties).map(function (p) { return this$1[p] ? breakpointClass(modifierClass(p), this$1[p]) : ''; }
+        ) ).filter(function (p) { return p !== ''; })
     },
   },
 };
 
 /* script */
-const __vue_script__$1 = script$1;
+var __vue_script__$1 = script$1;
 /* template */
 var __vue_render__$1 = function() {
   var _vm = this;
@@ -287,13 +287,13 @@ var __vue_staticRenderFns__$1 = [];
 __vue_render__$1._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$1 = undefined;
+  var __vue_inject_styles__$1 = undefined;
   /* scoped */
-  const __vue_scope_id__$1 = undefined;
+  var __vue_scope_id__$1 = undefined;
   /* module identifier */
-  const __vue_module_identifier__$1 = undefined;
+  var __vue_module_identifier__$1 = undefined;
   /* functional template */
-  const __vue_is_functional_template__$1 = false;
+  var __vue_is_functional_template__$1 = false;
   /* style inject */
   
   /* style inject SSR */
@@ -311,23 +311,23 @@ __vue_render__$1._withStripped = true;
     undefined
   );
 
-const properties$1 = {};
-breakpointKeys.forEach(breakpoint => {
+var properties$1 = {};
+breakpointKeys.forEach(function (breakpoint) {
   if (breakpoint !== '') {
     properties$1[breakpoint] = {
       type: [String, Boolean, Number],
       default: false,
     };
   }
-  let props = ['first', 'last'];
-  props.forEach(property => {
+  var props = ['first', 'last'];
+  props.forEach(function (property) {
     properties$1[property + capitalizeFirst(breakpoint)] = {
       type: Boolean,
       default: false,
     };
   });
   props = [('pull')];
-  props.forEach(property => {
+  props.forEach(function (property) {
     properties$1[property + capitalizeFirst(breakpoint)] = {
       type: [String, Number],
       default: '',
@@ -339,18 +339,17 @@ var script$2 = {
   name: 'AvCol',
   props: properties$1,
   computed: {
-    classes() {
-      return [
-        ...Object.keys(properties$1).map(p =>
-          this[p] ? breakpointClass(modifierClass(p), this[p]) : '',
-        ),
-      ].filter(p => p !== '')
+    classes: function classes() {
+      var this$1 = this;
+
+      return [].concat( Object.keys(properties$1).map(function (p) { return this$1[p] ? breakpointClass(modifierClass(p), this$1[p]) : ''; }
+        ) ).filter(function (p) { return p !== ''; })
     },
   },
 };
 
 /* script */
-const __vue_script__$2 = script$2;
+var __vue_script__$2 = script$2;
 /* template */
 var __vue_render__$2 = function() {
   var _vm = this;
@@ -367,13 +366,13 @@ var __vue_staticRenderFns__$2 = [];
 __vue_render__$2._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$2 = undefined;
+  var __vue_inject_styles__$2 = undefined;
   /* scoped */
-  const __vue_scope_id__$2 = undefined;
+  var __vue_scope_id__$2 = undefined;
   /* module identifier */
-  const __vue_module_identifier__$2 = undefined;
+  var __vue_module_identifier__$2 = undefined;
   /* functional template */
-  const __vue_is_functional_template__$2 = false;
+  var __vue_is_functional_template__$2 = false;
   /* style inject */
   
   /* style inject SSR */
@@ -396,7 +395,7 @@ var script$3 = {
 };
 
 /* script */
-const __vue_script__$3 = script$3;
+var __vue_script__$3 = script$3;
 
 /* template */
 var __vue_render__$3 = function() {
@@ -409,13 +408,13 @@ var __vue_staticRenderFns__$3 = [];
 __vue_render__$3._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$3 = undefined;
+  var __vue_inject_styles__$3 = undefined;
   /* scoped */
-  const __vue_scope_id__$3 = undefined;
+  var __vue_scope_id__$3 = undefined;
   /* module identifier */
-  const __vue_module_identifier__$3 = undefined;
+  var __vue_module_identifier__$3 = undefined;
   /* functional template */
-  const __vue_is_functional_template__$3 = false;
+  var __vue_is_functional_template__$3 = false;
   /* style inject */
   
   /* style inject SSR */
@@ -444,7 +443,7 @@ var script$4 = {
     iconStyle: {
       type: String,
       default: 'solid',
-      validator(v) {
+      validator: function validator(v) {
         return ['solid', 'regular', 'brands'].includes(v)
       },
     },
@@ -460,7 +459,7 @@ var script$4 = {
     },
   },
   computed: {
-    fontStyle() {
+    fontStyle: function fontStyle() {
       switch (this.iconStyle) {
         case 'regular':
           return 'far'
@@ -473,16 +472,19 @@ var script$4 = {
       }
     },
   },
-  created() {
-    this.classesProvider.add(() => ({
-      [this.fontStyle]: true,
-      [`fa-${this.name}`]: Boolean(this.name),
-    }));
+  created: function created() {
+    var this$1 = this;
+
+    this.classesProvider.add(function () {
+      var obj;
+
+      return (( obj = {}, obj[this$1.fontStyle] = true, obj[("fa-" + (this$1.name))] = Boolean(this$1.name), obj ));
+    });
   },
 };
 
 /* script */
-const __vue_script__$4 = script$4;
+var __vue_script__$4 = script$4;
 
 /* template */
 var __vue_render__$4 = function() {
@@ -505,13 +507,13 @@ var __vue_staticRenderFns__$4 = [];
 __vue_render__$4._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$4 = undefined;
+  var __vue_inject_styles__$4 = undefined;
   /* scoped */
-  const __vue_scope_id__$4 = undefined;
+  var __vue_scope_id__$4 = undefined;
   /* module identifier */
-  const __vue_module_identifier__$4 = undefined;
+  var __vue_module_identifier__$4 = undefined;
   /* functional template */
-  const __vue_is_functional_template__$4 = false;
+  var __vue_is_functional_template__$4 = false;
   /* style inject */
   
   /* style inject SSR */
@@ -529,11 +531,12 @@ __vue_render__$4._withStripped = true;
     undefined
   );
 
-const components = [AvContainer, AvRow, AvColumn, AvButton, AvIcon];
+var components = [AvContainer, AvRow, AvColumn, AvButton, AvIcon];
 
-const Atlaskit = {
-  install(Vue, options = {}) {
-(options.components || components).forEach(component => {
+var Atlaskit = {
+  install: function install(Vue, options) {
+    if ( options === void 0 ) options = {};
+(options.components || components).forEach(function (component) {
       Vue.component(component.name, component);
     });
   },
@@ -544,4 +547,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default Atlaskit;
-export { Atlaskit, AvColumn, AvContainer, AvRow };
+export { Atlaskit, AvButton, AvColumn, AvContainer, AvIcon, AvRow };

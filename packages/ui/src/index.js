@@ -1,4 +1,4 @@
-import './index.styl'
+import './index.scss'
 
 import AvContainer from './components/Container'
 import AvRow from './components/Row'
@@ -20,6 +20,6 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Atlaskit)
 }
 
-export { AvContainer, AvRow, AvColumn, Atlaskit }
+export { AvContainer, AvRow, AvColumn, AvButton, AvIcon, Atlaskit }
 
 export default Atlaskit
