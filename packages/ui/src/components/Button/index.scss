@@ -1,0 +1,92 @@
+@import '../../css/helpers/_map';
+@import './style/variables';
+
+.av-button {
+  align-items: baseline;
+  border-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  max-width: 100%;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  margin: ($grid-size / 2) + px;
+  cursor: default;
+  &.av-button-spacing-none {
+    margin: 0;
+  }
+  &:hover {
+    transition: background 0s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+  }
+  &:hover, &:active, &:selected {
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+  .inner-wrapper {
+    align-self: center;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    position: relative;
+    .content {
+      align-items: center;
+      align-self: center;
+      flex: 1 1 auto;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &.fit {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+@each $spacing, $properties in $button-spacings {
+  .av-button-spacing-#{$spacing} {
+    @each $property, $value in $properties {
+      #{$property}: $value;
+    }
+  }
+}
+
+@each $appearance, $properties in $button-appearances {
+  .av-button-#{$appearance}-light {
+    border-radius: 3px;
+    @each $property, $variants in $properties {
+      @if $property == "box-shadow-color" {
+        $focus: deep-map-get($variants, "focus", "light");
+        &:focus,
+        &.focus {
+          box-shadow: 0 0 0 2px $focus;
+        }
+      } @else {
+        $default: deep-map-get($variants, "default", "light");
+        #{$property}: $default;
+      }
+    }
+  }
+
+  .av-button-#{$appearance}-dark {
+    border-radius: 3px;
+    @each $property, $variants in $properties {
+      @if $property == "box-shadow-color" {
+        $focus: deep-map-get($variants, "focus", "dark");
+        &:focus,
+        &.focus {
+          box-shadow: 0 0 0 2px $focus;
+        }
+      } @else {
+        $default: deep-map-get($variants, "default", "dark");
+        #{$property}: $default;
+      }
+    }
+  }
+}

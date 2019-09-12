@@ -1,0 +1,428 @@
+@import '../../../css/config/variables';
+
+$compact-button-height: (($grid-size * 3) / $font-size);
+$button-height: (($grid-size * 4) / $font-size);
+
+$button-appearances: () !default;
+$button-appearances: map-merge(
+  (
+    "default": (
+        "background": (
+            "default": (
+                "light": rgba(9, 30, 66, 0.04),
+                "dark": #3B475C
+            ),
+            "hover": (
+                "light": rgba(9, 30, 66, 0.08),
+                "dark": #313D52
+            ),
+            "active": (
+                "light": rgba(179,212,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "disabled": (
+                "light": rgba(9, 30, 66, 0.04),
+                "dark": #3B475C
+            ),
+            "selected": (
+                "light": #253858,
+                "dark": #0D1424
+            ),
+            "focus-selected": (
+                "light": #253858,
+                "dark": #0D1424
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "focus-selected": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #42526E,
+                "dark": #9FB0CC
+            ),
+            "active": (
+                "light": #0052CC,
+                "dark": #0052CC
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #1B2638
+            ),
+            "selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            ),
+            "focus-selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            )
+        )
+    ),
+    "primary": (
+        "background": (
+            "default": (
+                "light": #0052CC,
+                "dark": #4C9AFF
+            ),
+            "hover": (
+                "light": #0065FF,
+                "dark": #B3D4FF
+            ),
+            "active": (
+                "light": #0747A6,
+                "dark": #2684FF
+            ),
+            "disabled": (
+                "light": rgba(9, 30, 66, 0.04),
+                "dark": #3B475C
+            ),
+            "selected": (
+                "light": #253858,
+                "dark": #0D1424
+            ),
+            "focus-selected": (
+                "light": #253858,
+                "dark": #0D1424
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "focus-selected": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #FFFFFF,
+                "dark": #1B2638
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #1B2638
+            ),
+            "selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            ),
+            "focus-selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            )
+        )
+    ),
+    "warning": (
+        "background": (
+            "default": (
+                "light": #FFAB00,
+                "dark": #FFAB00
+            ),
+            "hover": (
+                "light": #FFC400,
+                "dark": #FFC400
+            ),
+            "active": (
+                "light": #FF991F,
+                "dark": #FF991F
+            ),
+            "disabled": (
+                "light": rgba(9, 30, 66, 0.04),
+                "dark": #3B475C
+            ),
+            "selected": (
+                "light": #FF991F,
+                "dark": #FF991F
+            ),
+            "focus-selected": (
+                "light": #FF991F,
+                "dark": #FF991F
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": #FF8B00,
+                "dark": #FF8B00
+            ),
+            "focus-selected": (
+                "light": #FF8B00,
+                "dark": #FF8B00
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #172B4D,
+                "dark": #172B4D
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #1B2638
+            ),
+            "selected": (
+                "light": #172B4D,
+                "dark": #172B4D
+            ),
+            "focus-selected": (
+                "light": #172B4D,
+                "dark": #172B4D
+            )
+        )
+    ),
+    "danger": (
+        "background": (
+            "default": (
+                "light": #DE350B,
+                "dark": #DE350B
+            ),
+            "hover": (
+                "light": #FF5630,
+                "dark": #FF5630
+            ),
+            "active": (
+                "light": #BF2600,
+                "dark": #BF2600
+            ),
+            "disabled": (
+                "light": rgba(9, 30, 66, 0.04),
+                "dark": #3B475C
+            ),
+            "selected": (
+                "light": #BF2600,
+                "dark": #BF2600
+            ),
+            "focus-selected": (
+                "light": #BF2600,
+                "dark": #BF2600
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": #FF8F73,
+                "dark": #FF8F73
+            ),
+            "focus-selected": (
+                "light": #FF8F73,
+                "dark": #FF8F73
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #FFFFFF,
+                "dark": #FFFFFF
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #1B2638
+            ),
+            "selected": (
+                "light": #FFFFFF,
+                "dark": #FFFFFF
+            ),
+            "focus-selected": (
+                "light": #FFFFFF,
+                "dark": #FFFFFF
+            )
+        )
+    ),
+    "link": (
+        "background": (
+            "default": (
+                "light": none,
+                "dark": none
+            ),
+            "selected": (
+                "light": #253858,
+                "dark": #F4F5F7
+            ),
+            "focus-selected": (
+                "light": #253858,
+                "dark": #F4F5F7
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "focus-selected": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #0052CC,
+                "dark": #4C9AFF
+            ),
+            "hover": (
+                "light": #0065FF,
+                "dark": #B3D4FF
+            ),
+            "active": (
+                "light": #0747A6,
+                "dark": #2684FF
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #67758F
+            ),
+            "selected": (
+                "light": #F4F5F7,
+                "dark": #253858
+            ),
+            "focus-selected": (
+                "light": #F4F5F7,
+                "dark": #253858
+            )
+        )
+    ),
+    "subtle": (
+        "background": (
+            "default": (
+                "light": none,
+                "dark": none
+            ),
+            "hover": (
+                "light": rgba(9, 30, 66, 0.08),
+                "dark": #313D52
+            ),
+            "active": (
+                "light": rgba(179,212,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "disabled": (
+                "light": none,
+                "dark": none
+            ),
+            "selected": (
+                "light": #253858,
+                "dark": #0D1424
+            ),
+            "focus-selected": (
+                "light": #253858,
+                "dark": #0D1424
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "focus-selected": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #42526E,
+                "dark": #9FB0CC
+            ),
+            "active": (
+                "light": #0052CC,
+                "dark": #0052CC
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #67758F
+            ),
+            "selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            ),
+            "focus-selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            )
+        )
+    ),
+    "subtle-link": (
+        "background": (
+            "default": (
+                "light": none,
+                "dark": none
+            ),
+            "selected": (
+                "light": #253858,
+                "dark": #F4F5F7
+            ),
+            "focus-selected": (
+                "light": #253858,
+                "dark": #F4F5F7
+            )
+        ),
+        "box-shadow-color": (
+            "focus": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            ),
+            "focus-selected": (
+                "light": rgba(38,132,255, 0.6),
+                "dark": #B3D4FF
+            )
+        ),
+        "color": (
+            "default": (
+                "light": #6B778C,
+                "dark": #9FB0CC
+            ),
+            "hover": (
+                "light": #8993A4,
+                "dark": #DEEBFF
+            ),
+            "active": (
+                "light": #505F79,
+                "dark": #8C9CB8
+            ),
+            "disabled": (
+                "light": #A5ADBA,
+                "dark": #67758F
+            ),
+            "selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            ),
+            "focus-selected": (
+                "light": #F4F5F7,
+                "dark": #9FB0CC
+            )
+        )
+    )
+  ),
+  $button-appearances
+);
+
+$button-spacings: () !default;
+$button-spacings: map-merge(
+  (
+    "compact": (
+      "height": $compact-button-height + em,
+      "line-height": $compact-button-height + em,
+      "padding": 0 $grid-size + px,
+      "vertical-align": middle,
+    ),
+    "default": (
+      "height": $button-height + em,
+      "line-height": $button-height + em,
+      "padding": 0 $grid-size + px,
+      "vertical-align": middle,
+    ),
+    "none": (
+      "height": auto,
+      "line-height": inherit,
+      "padding": 0,
+      "vertical-align": baseline,
+    ),
+  ),
+  $button-spacings
+);
