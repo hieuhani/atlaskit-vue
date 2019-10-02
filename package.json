@@ -35,6 +35,7 @@
     "build": "yarn build:ui && yarn build:website",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:ci": "yarn build:ui && yarn test:coverage --ci --maxWorkers=4",
     "prebuild:ui": "yarn clean",
     "predev:ui": "yarn clean"
   },

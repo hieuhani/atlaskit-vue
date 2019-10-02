@@ -1,9 +1,7 @@
 module.exports = {
   verbose: true,
   moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
-  coverageReporters: ['json', 'html', 'lcov'],
-  coverageDirectory: '<rootDir>/coverage',
-  collectCoverageFrom: ['<rootDir>/packages/**/src/**/*.(vue|js)', '!<rootDir>/node_modules/**'],
+  collectCoverageFrom: ['<rootDir>/packages/ui/src/**/*.(vue|js)', '!<rootDir>/node_modules/**'],
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '^.+\\.js?$': 'babel-jest',
