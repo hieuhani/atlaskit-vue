@@ -34,6 +34,7 @@
     "build:website": "lerna exec --scope=@atlaskit-vue/ui -- yarn build",
     "build": "yarn build:ui && yarn build:website",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "prebuild:ui": "yarn clean",
     "predev:ui": "yarn clean"
   },
