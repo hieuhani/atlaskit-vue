@@ -6,7 +6,7 @@ echo 'Cleanup...'
 rm -rf dist
 
 echo 'Compile JS...'
-rollup -c scripts/rollup.config.js
+rollup -c scripts/rollup.config.js --environment BUILD:production 
 echo 'Done.'
 echo ''
 

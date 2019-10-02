@@ -27,25 +27,37 @@
     }
   },
   "scripts": {
-    "dev": "lerna run --parallel dev",
-    "build:ui": "lerna run build --stream --scope=@atlaskit-vue/ui",
-    "build:website": "lerna run build --stream --scope=@atlaskit-vue/website",
-    "build": "yarn build:ui && yarn build:website"
+    "clean": "rimraf packages/**/dist",
+    "dev:ui": "lerna exec --scope=@atlaskit-vue/ui -- yarn dev",
+    "dev:web": "lerna exec --scope=@atlaskit-vue/website -- yarn dev",
+    "build:ui": "lerna exec --scope=@atlaskit-vue/ui -- yarn build",
+    "build:website": "lerna exec --scope=@atlaskit-vue/ui -- yarn build",
+    "build": "yarn build:ui && yarn build:website",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prebuild:ui": "yarn clean",
+    "predev:ui": "yarn clean"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@commitlint/config-lerna-scopes": "^8.2.0",
     "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-service": "^3.9.3",
     "autoprefixer": "^9.6.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
     "husky": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-serializer-vue": "^2.0.2",
     "lerna": "^3.15.0",
     "node-sass": "^4.12.0",
     "node-sass-tilde-importer": "^1.0.2",
     "postcss-cli": "^6.1.3",
     "postcss-preset-env": "^6.7.0",
+    "rimraf": "^3.0.0",
     "rollup": "^1.17.0",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.0.1",
@@ -56,6 +68,7 @@
     "rollup-plugin-uglify": "^6.0.3",
     "rollup-plugin-vue": "^5.0.1",
     "vue": "^2.6.10",
+    "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.10"
   }
 }
