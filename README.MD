@@ -4,7 +4,7 @@ Atlaskit Vue is a UI library, built according to the Atlassian Design Guidelines
 
 ## Development & Testing
 
-Please check the [Contributing Guidelines](https://github.com/atlaskit-vue/atlaskit-vue/blob/master/CONTRIBUTING.md).
+Please check the [Contributing Guidelines](./CONTRIBUTING.md).
 
 ## Contribution
 
