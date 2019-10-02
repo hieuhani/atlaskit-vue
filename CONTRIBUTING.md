@@ -43,7 +43,11 @@ yarn
 When you are happy with your changes, run `yarn build`.
 If you don't want to repeat the process of linting & building from time to time, run `yarn dev` which should concurrently start **watching** and **serving**.
 
-### Step 5: Commit
+### Step 5: Tests
+
+It's easy, `yarn test`. Want coverage reports also? `yarn coverage`.
+
+### Step 6: Commit
 
 It is a recommended best practice to keep your changes as logically grouped as possible within individual commits. There is no limit to the number of commits any single PR may have, and many contributors find it easier to review changes that are split across multiple commits.
 
@@ -52,7 +56,7 @@ git add the/changed/files
 git commit
 ```
 
-### Step 6: Rebase
+### Step 7: Rebase
 
 As a best practice, once you have committed your changes, it is a good idea to use `git rebase` (not `git merge`) to synchronize your work with the upstream repository.
 
@@ -63,7 +67,7 @@ git rebase upstream/master
 
 This ensures that your working branch has the latest changes from upstream/master.
 
-### Step 7: Push
+### Step 8: Push
 
 Once you are sure your commits are ready to go, begin the process of opening a Pull Request by pushing your working branch to your fork on GitHub.
 
@@ -71,11 +75,11 @@ Once you are sure your commits are ready to go, begin the process of opening a P
 git push origin my-branch
 ```
 
-### Step 8: Opening the Pull Request
+### Step 9: Opening the Pull Request
 
 Once opened, Pull Requests are usually reviewed within a few hours or days.
 
-### Step 9: Discuss and update
+### Step 10: Discuss and update
 
 You will probably get feedback or requests for changes to your Pull Request. This is a big part of the submission process so don't be discouraged! Some contributors may sign off on the Pull Request right away, others may have more detailed comments or feedback. This is a necessary part of the process in order to evaluate whether the changes are correct and necessary.
 
