@@ -36,6 +36,7 @@
     "@babel/core": "^7.5.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-lerna-scopes": "^8.2.0",
     "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-service": "^3.9.3",
     "autoprefixer": "^9.6.1",
