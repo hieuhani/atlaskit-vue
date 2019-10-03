@@ -26,10 +26,10 @@ git fetch upstream
 
 ### Step 2: Make a branch
 
-As a best practice to keep your development environment as organized as possible, create local branches to work within. These should also be created directly off of the master branch.
+As a best practice to keep your development environment as organized as possible, create local branches to work within. These should also be created directly off of the `dev` branch.
 
 ```bash
-git checkout -b fix-something -t upstream/master
+git checkout -b fix-something -t upstream/dev
 ```
 
 ### Step 3: Install the dependencies
@@ -62,10 +62,10 @@ As a best practice, once you have committed your changes, it is a good idea to u
 
 ```bash
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/dev
 ```
 
-This ensures that your working branch has the latest changes from upstream/master.
+This ensures that your working branch has the latest changes from upstream/dev.
 
 ### Step 8: Push
 
@@ -91,11 +91,11 @@ git commit
 git push origin my-branch
 ```
 
-It is also frequently necessary to synchronize your Pull Request with other changes that have landed in master.
+It is also frequently necessary to synchronize your Pull Request with other changes that have landed in dev.
 
 ```bash
 git fetch --all
-git rebase origin/master
+git rebase origin/dev
 git push --force-with-lease origin my-branch
 ```
 
