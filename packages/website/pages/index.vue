@@ -15,27 +15,37 @@
       </av-col>
       <av-col>
         <h1>Button</h1>
-        <av-button mode="light" />
-        <av-button mode="dark" />
-        <av-button mode="light" appearance="primary" />
-        <av-button mode="dark" appearance="primary" />
-        <av-button mode="light" appearance="warning" />
-        <av-button mode="dark" appearance="warning" />
-        <av-button mode="light" appearance="danger" />
-        <av-button mode="dark" appearance="danger" />
-        <av-button mode="light" appearance="link" />
-        <av-button mode="dark" appearance="link" />
-        <av-button mode="light" appearance="subtle" />
-        <av-button mode="dark" appearance="subtle" />
-        <av-button mode="light" appearance="subtle-link" />
-        <av-button mode="dark" appearance="subtle-link" />
+        <av-button mode="light">Button</av-button>
+        <av-button mode="dark">Button</av-button>
+        <av-button mode="light" appearance="primary">Button</av-button>
+        <av-button mode="dark" appearance="primary">Button</av-button>
+        <av-button mode="light" appearance="warning">Button</av-button>
+        <av-button mode="dark" appearance="warning">Button</av-button>
+        <av-button mode="light" appearance="danger">Button</av-button>
+        <av-button mode="dark" appearance="danger">Button</av-button>
+        <av-button mode="light" appearance="link">Button</av-button>
+        <av-button mode="dark" appearance="link">Button</av-button>
+        <av-button mode="light" appearance="subtle">Button</av-button>
+        <av-button mode="dark" appearance="subtle">Button</av-button>
+        <av-button mode="light" appearance="subtle-link">Button</av-button>
+        <av-button mode="dark" appearance="subtle-link">Button</av-button>
+      </av-col>
+    </av-row>
+    <av-row>
+      <av-col>
+        <blanket />
       </av-col>
     </av-row>
   </av-container>
 </template>
 
 <script>
+import Blanket from '../examples/Blanket'
+
 export default {
+  components: {
+    Blanket,
+  },
   head: {
     title: 'Home',
   },

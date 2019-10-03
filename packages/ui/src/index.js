@@ -5,8 +5,16 @@ import AvRow from './components/Row'
 import AvColumn from './components/Column'
 import AvButton from './components/Button'
 import AvIcon from './components/Icon'
+import AvBlanket from './components/Blanket'
 
-const components = [AvContainer, AvRow, AvColumn, AvButton, AvIcon]
+const components = [
+  AvContainer,
+  AvRow,
+  AvColumn,
+  AvButton,
+  AvIcon,
+  AvBlanket,
+]
 
 const Atlaskit = {
   install(Vue, options = {}) {
@@ -20,6 +28,14 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Atlaskit)
 }
 
-export { AvContainer, AvRow, AvColumn, AvButton, AvIcon, Atlaskit }
+export {
+  AvContainer,
+  AvRow,
+  AvColumn,
+  AvButton,
+  AvIcon,
+  AvBlanket,
+  Atlaskit,
+}
 
 export default Atlaskit
