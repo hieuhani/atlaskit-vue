@@ -1,3 +1,5 @@
+@import '../../css/config/colors';
+
 .av-banner {
   overflow: hidden;
   transition: max-height 0.25s ease-in-out;
@@ -42,22 +44,22 @@
   }
   &.light {
     .av-banner-container {
-      background-color: #42526E;
+      background-color: $n500;
     }
     .av-banner-content {
-      background-color: #42526E;
-      fill: #42526E;
-      color: #FFFFFF;
+      background-color: $n500;
+      fill: $n500;
+      color: $n0;
     }
   }
   &.dark {
     .av-banner-container {
-      background-color: #42526E;
+      background-color: $n500;
     }
     .av-banner-content {
-      background-color: #42526E;
-      fill: #42526E;
-      color: #FFFFFF;
+      background-color: $n500;
+      fill: $n500;
+      color: $n0;
     }
   }
 }
@@ -65,22 +67,22 @@
 .av-banner-error {
   &.light {
     .av-banner-container {
-      background-color: #DE350B;
+      background-color: $r400;
     }
     .av-banner-content {
-      background-color: #DE350B;
-      fill: #DE350B;
-      color: #FFFFFF;
+      background-color: $r400;
+      fill: $r400;
+      color: $n0;
     }
   }
   &.dark {
     .av-banner-container {
-      background-color: #FF5630;
+      background-color: $r300;
     }
     .av-banner-content {
-      background-color: #FF5630;
-      fill: #FF5630;
-      color: #202B3D;
+      background-color: $r300;
+      fill: $r300;
+      color: $dn40;
     }
   }
 }
@@ -88,22 +90,22 @@
 .av-banner-warning {
   &.light {
     .av-banner-container {
-      background-color: #FFAB00;
+      background-color: $y300;
     }
     .av-banner-content {
-      background-color: #FFAB00;
-      fill: #FFAB00;
-      color: #202B3D;
+      background-color: $y300;
+      fill: $y300;
+      color: $dn40;
     }
   }
   &.dark {
     .av-banner-container {
-      background-color: #FFAB00;
+      background-color: $y300;
     }
     .av-banner-content {
-      background-color: #FFAB00;
-      fill: #FFAB00;
-      color: #CED9EB;
+      background-color: $y300;
+      fill: $y300;
+      color: $dn700;
     }
   }
 }
