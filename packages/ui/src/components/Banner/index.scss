@@ -1,0 +1,111 @@
+@import '../../css/config/colors';
+
+.av-banner {
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+
+  .av-banner-container {
+    max-height: 52px;
+    overflow: visible;
+  }
+  .av-banner-content {
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+    margin: auto;
+    transition: color 0.25s ease-in-out;
+  
+    a,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .av-banner-text {
+    flex: 0 1 auto;
+    padding: 4px;
+    overflow: hidden;
+  }
+}
+
+.av-banner-announcement {
+  .av-banner-container {
+    max-height: 88px;
+    overflow: scroll;
+  }
+  .av-banner-content {
+    max-width: 876px;
+  }
+  &.light {
+    .av-banner-container {
+      background-color: $n500;
+    }
+    .av-banner-content {
+      background-color: $n500;
+      fill: $n500;
+      color: $n0;
+    }
+  }
+  &.dark {
+    .av-banner-container {
+      background-color: $n500;
+    }
+    .av-banner-content {
+      background-color: $n500;
+      fill: $n500;
+      color: $n0;
+    }
+  }
+}
+
+.av-banner-error {
+  &.light {
+    .av-banner-container {
+      background-color: $r400;
+    }
+    .av-banner-content {
+      background-color: $r400;
+      fill: $r400;
+      color: $n0;
+    }
+  }
+  &.dark {
+    .av-banner-container {
+      background-color: $r300;
+    }
+    .av-banner-content {
+      background-color: $r300;
+      fill: $r300;
+      color: $dn40;
+    }
+  }
+}
+
+.av-banner-warning {
+  &.light {
+    .av-banner-container {
+      background-color: $y300;
+    }
+    .av-banner-content {
+      background-color: $y300;
+      fill: $y300;
+      color: $dn40;
+    }
+  }
+  &.dark {
+    .av-banner-container {
+      background-color: $y300;
+    }
+    .av-banner-content {
+      background-color: $y300;
+      fill: $y300;
+      color: $dn700;
+    }
+  }
+}
