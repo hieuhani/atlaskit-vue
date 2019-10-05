@@ -6,6 +6,7 @@ import AvColumn from './components/Column'
 import AvButton from './components/Button'
 import AvIcon from './components/Icon'
 import AvBlanket from './components/Blanket'
+import AvBanner from './components/Banner'
 
 const components = [
   AvContainer,
@@ -14,6 +15,7 @@ const components = [
   AvButton,
   AvIcon,
   AvBlanket,
+  AvBanner,
 ]
 
 const Atlaskit = {
@@ -35,6 +37,7 @@ export {
   AvButton,
   AvIcon,
   AvBlanket,
+  AvBanner,
   Atlaskit,
 }
 

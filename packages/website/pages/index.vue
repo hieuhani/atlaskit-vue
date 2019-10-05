@@ -36,6 +36,19 @@
         <blanket />
       </av-col>
     </av-row>
+    <av-row>
+      <av-col>
+        <av-banner appearance="announcement">
+          This is a announcement banner
+        </av-banner>
+        <av-banner appearance="warning">
+          This is a warning banner
+        </av-banner>
+        <av-banner appearance="error">
+          This is a error banner
+        </av-banner>
+      </av-col>
+    </av-row>
   </av-container>
 </template>
 
