@@ -1,8 +1,8 @@
 <template>
-  <button class="av-button" :class="classes">
+  <button class="av-button" :class="classes" @click="$emit('click')">
     <span :class="{ 'inner-wrapper': true, fit: true }">
       <span class="content">
-        Button
+        <slot />
       </span>
     </span>
   </button>
